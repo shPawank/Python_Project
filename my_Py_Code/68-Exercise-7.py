@@ -9,4 +9,7 @@ import os
 
 files = os.listdir("my_Py_Code/ClutteredFolder")
 for file in files:
-    print(file)
+    if file.endswith(".png"):
+        print(file)
+    os.rename(f"my_Py_Code/ClutteredFolder/{file}", f"my_Py_Code/ClutteredFolder/{files.index(file)+1}.png")    
+  
